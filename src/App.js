@@ -18,7 +18,7 @@ class App extends Component {
     fetch(API).then(res => res.json()).then(res => {
       this.setState({
         quotes: res.quotes
-      });
+      }, this.getRandomIndex);
     });
   }
 
